@@ -8,8 +8,11 @@ set server_config=server_zm.cfg
 :://///////////////////////////////////////////////////////////////////////////
 set port=27016
 
+:: example: mods/raygun
+set mod=
+
 ::///////////////////////////////////////////////////////////////////////
 :://  You're done!! Give yourself a pat on the back for getting here.  //
 ::///////////////////////////////////////////////////////////////////////
 
-start iw7-mod.exe -dedicated +cpMode +set net_port "%port%" +exec %server_config% +map_rotate
+start iw7-mod.exe -dedicated -cpMode +set net_port "%port%" +set fs_game "%mod%" +exec %server_config% +map_rotate
